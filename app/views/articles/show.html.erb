@@ -1,4 +1,4 @@
-<h1> This is the show page </h1>
+<h1> Showing selected Articles </h1>
 
 <p>
 Title: <%= @article.title %>
@@ -10,4 +10,12 @@ Description: <%= @article.description %>
 
 <p>
 Created: <%= @article.created_at %>
+</p>
+
+<p>
+<%= link_to "Edit", edit_article_path(@article) %>
+</p>
+
+<p>
+<%= link_to "Back", articles_path %>
 </p>
