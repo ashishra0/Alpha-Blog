@@ -3,6 +3,9 @@
 <div class="blog-post">
 <% @articles.each do |article| %>
 <h2 class="blog-post-title article-title"><%= article.title.capitalize %></h2>
+<div class="article-meta-details">
+<small> By <%= article.user.username if article.user %> <%= time_ago_in_words(article.created_at) %> ago </small>
+</div>
 <% body = article.description || 'No content available' %>
 <p class="article-body"><%= truncate(body, length: 200) %></p>
 <%= link_to "Click here to view more", article_path(article) %>
