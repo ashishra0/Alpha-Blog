@@ -12,8 +12,9 @@ class ApplicationController < ActionController::Base
   end
   
   def require_user
-    !logged_in?
+    if !logged_in?
     flash[:danger] = "Action could not be performed."
     redirect_to root_path
+    end
   end
 end
