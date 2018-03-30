@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AlphaBlog</title>
+    <title>Viable</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application','https://fonts.googleapis.com/css?family=Andika|Bowlby+One+SC|Bungee+Inline|Ceviche+One|Cinzel|Faster+One|Roboto+Slab', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,12 +13,9 @@
   <%= render 'layouts/navigation' %>
   
   <%= render 'layouts/messages' %>
-
   <div class="container">
     <%= yield %>
   </div>
-
-  <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
   </body>
+  <%= render 'layouts/footer' %>
 </html>

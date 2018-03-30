@@ -1,10 +1,11 @@
 $navbar-default-bg: #184FAE;
 
+
 #logo {
     font-weight: bold;
     font-size: 1.7em;
     float: left;
-    color: #fff;
+    color: turquoise;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
@@ -44,7 +45,7 @@ $navbar-default-bg: #184FAE;
 }
 
 .color {
-    color: #fff;;
+    color: #fff;
 }
 
 .btn-xlarge {
@@ -119,6 +120,8 @@ footer ul li {
     list-style: none;
     padding-left: 0;
 }
+
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

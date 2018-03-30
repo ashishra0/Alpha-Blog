@@ -1,5 +1,7 @@
 <div class="center jumbotron">
-    <span class="color"><h1 class="blog-title">VIABLE</h1></span>
-    <%= link_to 'Sign up', 'signup', class: "btn btn-danger btn-lg btn-xlarge" %>
-    <%= link_to 'Log In', "#", class: "btn btn-success btn-lg btn-xlarge" %>
+    <span class="color"><h1 class="blog-title"> WELCOME TO VIABLE</h1></span>
+    <% if logged_in? != true %>
+    <%= link_to 'Sign up', signup_path, class: "btn btn-danger btn-lg btn-xlarge" %>
+    <%= link_to 'Log In', login_path, class: "btn btn-success btn-lg btn-xlarge" %>
+    <% end %>
 </div>
