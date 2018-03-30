@@ -115,5 +115,10 @@ footer ul li {
     margin-bottom: 15px;
 }
 
+.listing {
+    list-style: none;
+    padding-left: 0;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
