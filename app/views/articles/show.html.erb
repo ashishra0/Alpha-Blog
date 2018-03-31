@@ -5,7 +5,6 @@
 <div class="row center">
 <div class="col-md-4 col-md-offset-4">
     <li>Created By: </li>
-    <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
     <li><%= link_to @article.user.username, user_path(@article.user) %></li>
     <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
 </div>
@@ -13,10 +12,15 @@
 </ul>
 <% end %>
     <h4 class="center description"><strong>Description</strong></h4>
+    <div class="row center">
+    <%= image_tag @article.image.url(:medium) %>
+    </div>
     <hr>
+    <div class="row center">
     <%= simple_format(@article.description) %>
-    <div class="article-actions">
-    <% if logged_in? && (current_user == @article.user || current_user_admin?) %>
+    </div>
+    <div class="row center article-actions">
+    <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <%= link_to "Edit Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
     <%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %>
     <% end %>

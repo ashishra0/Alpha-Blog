@@ -1,6 +1,5 @@
 $navbar-default-bg: #184FAE;
 
-
 #logo {
     font-weight: bold;
     font-size: 1.7em;
@@ -11,17 +10,16 @@ $navbar-default-bg: #184FAE;
 }
 
 #logo:hover {
-    color: #fff;
     text-decoration: none;
 }
 
 #about {
-    color: #fff;
+    color: #000;
     font-size: 1.2em;
 }
 
 #blog {
-    color: #fff;
+    color: #000;
     font-size: 1.2em;
 }
 
@@ -53,27 +51,27 @@ $navbar-default-bg: #184FAE;
     background-color: black;
 }
 
-footer {
+.footer {
     margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid teal;
     color: #777;
 }
 
-footer a:hover {
+.footer a:hover {
     color: #222;
 }
-
-footer small {
+.footer small {
     float: left;
+    
 }
 
-footer ul {
+.footer ul {
     float: right;
     list-style: none;
 }
 
-footer ul li {
+.footer ul li {
     float: left;
     margin-left: 15px;
 }
@@ -121,6 +119,27 @@ footer ul li {
     padding-left: 0;
 }
 
+#dropdown {
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+}
+
+.navbar-text {
+    color: black;
+    font-size: 17px;
+}
+
+.image {
+    padding-bottom: 10px;
+}
+
+.profile {
+    border-color: #fff;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10%;
+}
 
 
 @import "bootstrap-sprockets";
