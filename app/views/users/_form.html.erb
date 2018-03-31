@@ -29,7 +29,6 @@
                 <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
             </div>
         </div>
-            <%= f.file_field :avatar, class: "image"%>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-primary btn-lg") %>
