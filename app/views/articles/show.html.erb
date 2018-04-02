@@ -13,8 +13,8 @@
 <% end %>
     <h4 class="center description"><strong>Description</strong></h4>
     <hr>
-    <div class="row center">
-    <%= simple_format(@article.description)%>
+    <div class="row center body-style">
+    <%= simple_format(@article.description) %>
     </div>
     <div class="row center article-actions">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>

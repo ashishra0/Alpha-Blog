@@ -1,5 +1,5 @@
 
-<div class="col-sm-8 col-sm-offset-2 blog-main">
+<div class="col-sm-8 col-sm-offset-0 blog-main">
 <div class="blog-post">
 <% obj.each do |article| %>
 <h2 class="blog-post-title article-title"><%= article.title.capitalize %></h2>
@@ -7,7 +7,7 @@
 <small> By <%= article.user.username if article.user %> <%= time_ago_in_words(article.created_at) %> ago </small>
 </div>
 <% body = article.description || 'No content available' %>
-<p class="article-body"><%= truncate(body, length: 200) %></p>
+<p class="body-style index-body"><%= truncate(body, length: 200) %></p>
 <%= link_to "Click here to view more", article_path(article) %>
 <hr>
 <div class="article-actions">
@@ -17,6 +17,7 @@
     <% end %>
 </div>
 <% end %>
+</div>
 </div>
 </div>
 </div>
