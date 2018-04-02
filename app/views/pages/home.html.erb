@@ -1,12 +1,12 @@
-<body class="body">
+<div class="container-fluid">
 <div class="center jumbotron">
-    <span class="color"><h1 class="blog-title"></h1></span>
+    <span class="color"><h1 class="blog-title">The Blog for everyone</h1></span>
+    <span class="mini-title"><small></small></h1></span>
     <% if logged_in? != true %>
-    <%= link_to 'Sign up', signup_path, class: "btn btn-danger btn-lg btn-xlarge" %>
-    <%= link_to 'Log In', login_path, class: "btn btn-success btn-lg btn-xlarge" %>
+    <%= link_to 'Get Started', signup_path, class: "btn btn-success btn-lg btn-xlarge btn-style" %>
     <% end %>
 </div>
 <div class="page-header">
   <h1>Popular On Viable <small>Coming soon</small></h1>
 </div>
-</body>
+</div>
