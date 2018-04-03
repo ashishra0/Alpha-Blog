@@ -6,7 +6,7 @@
 
 <div class="center">
 <% if @user_articles.count > 0 %>
-<%= will_paginate @user_articles %>
+<%= will_paginate (@user_articles).order('created_at DESC') %>
 <% else %>
 <div class="well">
 No articles to display
@@ -15,5 +15,5 @@ No articles to display
 </div>
 <%= render 'articles/article', obj: @user_articles %>
 <div class="center">
-<%= will_paginate @user_articles %>
+<%= will_paginate (@user_articles).order('created_at DESC') %>
 </div>
