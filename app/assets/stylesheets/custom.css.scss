@@ -159,5 +159,13 @@ body {
 }
 
 
+.input_checkbox input {
+    width: auto !important;
+    font-size: 20px;
+}
+
+
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
