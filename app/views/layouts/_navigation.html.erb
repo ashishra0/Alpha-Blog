@@ -17,17 +17,20 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Blog', articles_path, id: "blog" %></li>
         <li><%= link_to 'Community', users_path, id: "about" %></li>
+        <li><%= link_to 'Categories', categories_path, id: "about" %></li>
         <% if logged_in? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="dropdown">Actions<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to 'Create New Article', new_article_path, id: "action" %></li>
+            <li role="separator" class="divider"></li>
             <li><%= link_to 'Your Articles', user_path(session[:user_id]) %></li>
-            <li><a href="#">Coming Soon</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Coming Soon</a></li>
+            <% if logged_in? and current_user.admin? %>
+            <li><%= link_to 'Create New Category', new_category_path, id: "action" %></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Coming Soon</a></li>
+            <% end %>
+            <li role="separator" class="divider"></li>
           </ul>
         </li>
         <p class="navbar-text navbar-right">Signed in as <%= current_user.username %><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
