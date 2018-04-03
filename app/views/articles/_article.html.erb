@@ -2,7 +2,7 @@
 <div class="col-sm-8 col-sm-offset-0 blog-main">
 <div class="blog-post">
 <% obj.each do |article| %>
-<h2 class="blog-post-title article-title"><%= article.title.capitalize %></h2>
+<h2 class="blog-post-title article-title"><%= link_to "#{article.title.capitalize}", article_path(article) %></h2>
 <div class="article-meta-details">
 <small> By <%= article.user.username if article.user %> <%= time_ago_in_words(article.created_at) %> ago </small>
 </div>

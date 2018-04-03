@@ -2,18 +2,23 @@ require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
+    def setup
+        @category = Category.create(name: "Engineering")
+    end
+
+
     test "should get categories index" do
-        get :categories
+        get categories_url
         assert_response :success
     end
 
     test "should get new" do
-        get :new_category
+        get new_category_url
         assert_response :success
     end
 
     test "should get show" do
-        get :category
+        get category_url(@category)
         assert_response :success
     end
 
