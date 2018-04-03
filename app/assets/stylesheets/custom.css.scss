@@ -2,7 +2,6 @@ $navbar-default-bg: #184FAE;
 
 
 html {
-    width: 100%;
     overflow-x: auto;
     overflow-wrap: hidden;
 }
@@ -125,7 +124,8 @@ body {
 
 .listing {
     list-style: none;
-    padding-left: 0;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #dropdown {

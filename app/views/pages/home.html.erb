@@ -1,9 +1,9 @@
 <div class="container-fluid">
 <div class="center jumbotron">
     <span class="color"><h1 class="blog-title">The Blog for everyone</h1></span>
-    <span class="mini-title"><small></small></h1></span>
+    <div class="container mini-title"><small>Have something interesting? Let the world know!</small></h1></div>
     <% if logged_in? != true %>
-    <%= link_to 'Get Started', signup_path, class: "btn btn-success btn-lg btn-xlarge btn-style" %>
+    <div class="container"><%= link_to 'Get Started', signup_path, class: "btn btn-success btn-lg btn-xlarge" %></div>
     <% end %>
 </div>
 <div class="page-header">
