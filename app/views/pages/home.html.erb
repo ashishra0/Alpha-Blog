@@ -45,7 +45,7 @@
               <% @categories.each do |category| %>
                 <% if category.present? %>
                 <li class="list-group-item">
-                <span class="badge"><%= category.articles.count %></span>
+                <span class="badge"><%= category.articles.select(:title).count %></span>
                 <%= link_to "#{category.name}", category_path(category) %>
                 </li>
                 <% end %>
