@@ -15,7 +15,9 @@
     <h4 class="center description"><strong>Description</strong></h4>
     <hr>
         <div class="row center body-style">
+        <div class="container-fluid">
             <%= simple_format(@article.description) %>
+        </div>
         </div>
         <div class="row center body-style">
         <% if @article.categories.any? %>
