@@ -4,5 +4,6 @@ class Article < ApplicationRecord
     has_many :categories, through: :article_categories
     validates :title, presence: true, length: {minimum: 3, maximum: 50}
     validates :description, presence: true, length: {minimum: 10, maximum: 10000}
+    WillPaginate.per_page = 10
     
 end

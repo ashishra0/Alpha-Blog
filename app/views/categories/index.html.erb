@@ -1,16 +1,15 @@
 <h1 align="center" class="title">All Categories</h1>
- <div align="center">
-    <%= will_paginate %>
+ <div align="center"><br>
     <% @categories.each do |category| %>
-        <ul class="listing">
+        <ul class="list-group">
             <div class="container-fluid">
                 <div class="row center">
-                    <div class="well col-lg-4 col-lg-offset-4">
-                        <li class="article-title">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <li class="list-group-item article-title">
                         <%= link_to "#{category.name}", category_path(category) %>
                         </li>
-                        <li>
-                        <small>
+                        <li class="list-group-item">
+                        <small class="count">
                         <%= pluralize(category.articles.count, "article") %>
                         </small>
                         </li>
