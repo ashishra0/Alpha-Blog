@@ -9,6 +9,6 @@ module HomeHelper
     end
 
     def popular_category
-        @categories = Category.order(@article)
+        @categories = Category.order(@article).first(5)
     end
 end
