@@ -6,8 +6,11 @@ html {
     overflow-wrap: hidden;
 }
 
+
+
 body {
     padding-top: 80px;
+    background-color: rgb(27, 37, 37);
 }
 
 
@@ -38,7 +41,7 @@ body {
 }
 
 .jumbotron {
-    background-image: asset-url('neural-network.jpg');
+    background-image: asset-url('multiverse.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
@@ -47,18 +50,19 @@ body {
 .jumbotron h1 {
     color: #fff;
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 8px;
+    margin-bottom: 20px;
     letter-spacing: -1px;
     font-weight: bold;
 }
 
 .color {
-    color: #fff;
+    color: lightseagreen;
 }
 
 .btn-xlarge {
     font-size: 1.7em;
-    background-color: black;
+    margin-top: 20px;
 }
 
 .footer {
@@ -103,7 +107,7 @@ body {
     font-weight: bold;
     font-size: 2.0em;
     color: #1193F6;
-    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Bungee Inline', serif;
 }
 
 
@@ -153,10 +157,16 @@ body {
     color: #fff;
 }
 .mini-title {
-    color: #FFFFF0;
+    color: rgb(235, 238, 238);
     font-size: 30px;
+    font-weight: bold;
 }
 
+.highlight {
+    color: #000;
+    background-color: lightcoral;
+    font-weight: bold;
+}
 
 .input_checkbox input {
     width: auto !important;
@@ -166,6 +176,37 @@ body {
 .count {
     font-weight: bold;
 }
+
+.user-name {
+    color: palevioletred;
+}
+
+.user {
+    font-size: 14px;
+}
+
+.date {
+    font-size: 14px;
+}
+
+
+.footer-text {
+    font-size: 14px;
+}
+
+.footer-credits {
+    color: coral;
+}
+
+
+.list-category {
+    font-size: 17px;
+}
+
+.blog-title {
+    color: lightseagreen;
+}
+
 
 
 
