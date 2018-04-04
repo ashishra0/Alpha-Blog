@@ -43,12 +43,10 @@
       <ul class="list-group">
         <% if @categories.any? %>
           <% @categories.each do |category| %>
-            <% if category.articles.count.nonzero? %>
               <li class="list-group-item">
-                <span class="badge"><%= category.articles.count %></span>
+                <span class="badge"><%= category.articles.count.nonzero? %></span>
                 <%= link_to "#{category.name}", category_path(category) %>
               </li>
-            <% end %>
           <% end %>
         <% end %>
       </ul>
