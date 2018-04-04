@@ -41,17 +41,17 @@
       </div>
       <ul class="list-group">
         <% popular_category %>
-            <% if @categories.any? %>
+            <% if @categories.present? %>
               <% @categories.each do |category| %>
-                <% if category.present? %>
-                <li class="list-group-item">
-                <span class="badge"><%= category.articles.select(:title).count %></span>
-                <%= link_to "#{category.name}", category_path(category) %>
-                </li>
+                <% if category.articles.present? %>
+                  <li class="list-group-item">
+                    <span class="badge"><%= category.articles.select(:title).count %></span>
+                    <%= link_to "#{category.name}", category_path(category) %>
+                  </li>
                 <% end %>
               <% end %>
             <% end %>
-      </ul>
+        </ul>
     </div>
   </div>
 </div>
