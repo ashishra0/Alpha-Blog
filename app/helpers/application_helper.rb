@@ -6,7 +6,7 @@ module ApplicationHelper
     end
 
     def popular_category
-        @categories = Category.all
+        @categories = Category.all.limit(5)
     end
 
 end
