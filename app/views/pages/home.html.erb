@@ -41,7 +41,7 @@
       </div>
       <% popular_category %>
       <div class="well">
-        <% if @categories.any? %>
+        <% if @categories.count.nonzero? %>
           <% @categories.each do |category| %>
             <% if category.articles.count != 0 %>
                 <%= category.articles.count.nonzero? %>
