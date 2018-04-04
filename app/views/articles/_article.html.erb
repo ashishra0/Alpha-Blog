@@ -1,6 +1,6 @@
 
-<div class="col-sm-8 col-sm-offset-0 blog-main">
-<div class="blog-post">
+<div class="col-sm-8 col-sm-offset-2 blog-main">
+<div class="center">
 <% obj.each do |article| %>
 <h2 class="blog-post-title article-title"><%= link_to "#{article.title.capitalize}", article_path(article) %></h2>
 <div class="article-meta-details">
@@ -10,7 +10,7 @@
 <% end %>
 </div>
 <% body = article.description || 'No content available' %>
-<p class="body-style index-body"><%= truncate(body, length: 200) %></p>
+<p class="body-style index-body"><%= truncate(body, length: 500) %></p>
 <%= link_to "Click here to view more", article_path(article) %>
 <div class="article-actions">
     <% if logged_in? && (current_user == article.user || current_user.admin?) %>

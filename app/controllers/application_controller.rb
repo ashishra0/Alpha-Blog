@@ -17,4 +17,13 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
     end
   end
+
+  def home_article
+    @article = Article.new
+  end
+
+  def show_article_on_homepage
+    @articles = Article.order("created_at desc").limit(5)
+  end
+
 end

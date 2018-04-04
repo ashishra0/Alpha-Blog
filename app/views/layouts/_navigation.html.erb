@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Viable', root_path, class: "navbar-brand", id: "logo" %>
+      <%= link_to "article.do", root_path, class: "navbar-brand", id: "logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +30,6 @@
             <li><%= link_to 'Create New Category', new_category_path, id: "action" %></li>
             <li role="separator" class="divider"></li>
             <% end %>
-            <li role="separator" class="divider"></li>
           </ul>
         </li>
         <p class="navbar-text navbar-right">Signed in as <%= current_user.username %><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
