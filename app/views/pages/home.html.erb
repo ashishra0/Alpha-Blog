@@ -40,18 +40,17 @@
         <h1 align="center"><small>Categories</small></h1>
       </div>
       <% popular_category %>
-      <ul class="list-group">
+      <div class="list-group">
         <% if @categories.any? %>
           <% @categories.each do |category| %>
             <% if (category.articles).count.nonzero? %>
-              <li class="list-group-item">
-                <span class="badge"><%= category.articles.count %></span>
-                <%= link_to "#{category.name}", category_path(category) %>
-              </li>
+              <button type="button" class="list-group-item">
+                <%= category.articles.count %>
+                <%= link_to "#{category.name}", category_path(category) %></button>
             <% end %>
           <% end %>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
