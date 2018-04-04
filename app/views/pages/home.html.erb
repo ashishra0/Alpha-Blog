@@ -39,8 +39,8 @@
       <div class="page-header" align="right">
         <h1 align="center"><small>Categories</small></h1>
       </div>
-      <ul class="list-group">
       <% popular_category %>
+      <ul class="list-group">
         <% if @categories.any? %>
         <% @categories.each do |category| %>
           <% if (category.articles).count.nonzero? %>
