@@ -43,7 +43,7 @@
         <% popular_category %>
             <% if @categories.any? %>
               <% @categories.each do |category| %>
-                <% if category.articles.present? %>
+                <% if category.present? %>
                 <li class="list-group-item">
                 <span class="badge"><%= category.articles.count %></span>
                 <%= link_to "#{category.name}", category_path(category) %>
