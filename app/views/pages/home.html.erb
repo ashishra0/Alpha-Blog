@@ -39,17 +39,16 @@
       <div class="page-header" align="right">
         <h1 align="center"><small>Categories</small></h1>
       </div>
-      <% popular_category %>
-      <div class="well">
-        <% if @categories.count.nonzero? %>
-          <% @categories.each do |category| %>
-            <% if category.articles.count != 0 %>
-                <%= category.articles.count.nonzero? %>
+      <ul class="list-group">
+        <% popular_category %>
+            <% if @categories.any? %>
+              <% @categories.each do |category| %>
+                <li class="list-group-item">
                 <%= link_to "#{category.name}", category_path(category) %>
+                </li>
+              <% end %>
             <% end %>
-          <% end %>
-        <% end %>
-      </div>
+      </ul>
     </div>
   </div>
 </div>
