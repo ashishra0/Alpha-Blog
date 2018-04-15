@@ -1,24 +1,21 @@
-# README
+# Rails Blog :newspaper:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Specifications
+* Rails version: 5.1.5
+* Ruby version: 2.5.0
+___
 
-Things you may want to cover:
+### Aim
+* Learning to build applications from scratch.
+* Explore the power of Rails.
+* Understand CRUD operations.
+* Understand the MVC architecture.
+* Learn to build Authentication Systems.
+* Code maintenance.
+* Testing in Rails by running Mini & Integration Tests.
+* Pushing to Production.
+___
 
-* Ruby version
+[View the app here](http://article-do.herokuapp.com) :computer:
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
