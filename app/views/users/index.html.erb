@@ -1,22 +1,22 @@
 <h1 align="center" class="title">Contributors</h1>
 <div align="center"><br>
-<% @users.each do |user| %>
-<ul class="listing">
-<div class="container-fluid">
-<div class="row">
-<div class="well col-lg-4 col-lg-offset-4">
-    <li class="article-title">
-    <%= link_to user.username, user_path(user) %>
-    </li>
-    <li><small class="count"><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
-    <% if logged_in? and current_user.admin? %>
-    <li><%= link_to "Delete User", user_path(user), method: :delete, data: {confirm: "Proceed with deleting user"} %></li>
-    <li><%= link_to "Edit User", edit_user_path(user) %></li>
+    <% @users.each do |user| %>
+        <ul class="listing">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="well col-lg-4 col-lg-offset-4">
+                        <li class="article-title">
+                            <%= link_to user.username, user_path(user) %>
+                        </li>
+                        <li><small class="count"><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+                        <% if logged_in? and current_user.admin? %>
+                            <li><%= link_to "Delete User", user_path(user), method: :delete, data: {confirm: "Proceed with deleting user"} %></li>
+                            <li><%= link_to "Edit User", edit_user_path(user) %></li>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </ul>
     <% end %>
-</div>
-</div>
-</ul>
-<% end %>
-<%= will_paginate %>
-</div>
+    <%= will_paginate %>
 </div>

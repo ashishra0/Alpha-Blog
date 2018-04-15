@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
     end
 
     def show 
-        
     end
 
     def edit
@@ -49,6 +48,7 @@ class ArticlesController < ApplicationController
     def set_article
         @article = Article.find(params[:id])
     end
+    
     def article_params
         params.require(:article).permit(:title, :description, category_ids: [])
     end
