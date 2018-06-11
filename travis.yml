@@ -1,6 +1,7 @@
 dist: trusty
 cache: bundler
 language: ruby
+os: osx
 
 rvm:
   - 2.3.3
