@@ -12,10 +12,6 @@ services:
   - mysql
 
 before_install:
-  - wget https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip
-  - sudo cp chromedriver /usr/local/bin/.
-  - sudo chmod +x /usr/local/bin/chromedriver
   - mysql -e 'CREATE DATABASE IF NOT EXISTS template_test;'
 
 script:
