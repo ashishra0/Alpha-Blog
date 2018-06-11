@@ -1,5 +1,5 @@
 # Rails Blog :newspaper:
-[![Build Status]()
+[![Build Status](https://travis-ci.org/ashishra0/Rails-Blog.svg?branch=master)](https://travis-ci.org/ashishra0/Rails-Blog)
 ### Specifications
 * Rails version: 5.1.5
 * Ruby version: 2.5.0
