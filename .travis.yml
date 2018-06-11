@@ -12,6 +12,7 @@ services:
   - mysql
 
 before_install:
+- gem install rails -v 5.1.5
 
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
